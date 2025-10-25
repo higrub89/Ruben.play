@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Videos - Ruben.play</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header>
+        <h1>🎬 Ruben.play</h1>
+        <p class="subtitle">Tu página de multimedia personal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/videos" class="active">Videos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="videos-section">
+            <h2>Todos los Videos</h2>
+            <div class="video-grid">
+                <div th:each="video : ${videos}" class="video-card">
+                    <div class="video-container">
+                        <video controls th:src="${video.url}">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3 th:text="${video.title}">Título del Video</h3>
+                        <p th:text="${video.description}">Descripción del video</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ruben.play - Proyecto de multimedia en Java</p>
+    </footer>
+
+    <script th:src="@{/js/player.js}"></script>
+</body>
+</html>
