@@ -1,7 +1,5 @@
 package ruben.play;
 
-import java.util.Scanner;
-
 import ruben.play.contenido.Pelicula;
 import ruben.play.plataforma.Usuario;
 
@@ -14,6 +12,8 @@ public class Main {
 		pelicula.anioEstreno = 2002;
 		pelicula.genero = "Fantasía";
 		pelicula.calificar(4.2);
+		
+		System.out.println(pelicula.obtenerFichaTecnica());
 		
 		Usuario usuario = new Usuario();
 		usuario.nombre = "Carlos";
