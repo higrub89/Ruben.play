@@ -1,5 +1,7 @@
 package ruben.play;
 
+import java.time.LocalDate;
+
 import ruben.play.contenido.Pelicula;
 import ruben.play.plataforma.Usuario;
 
@@ -9,7 +11,7 @@ public class Main {
 		
 		Pelicula pelicula = new Pelicula();
 		pelicula.titulo = "El señor de los anillos";
-		pelicula.anioEstreno = 2002;
+		pelicula.fechaEstreno = LocalDate.of(2018, 10, 15);
 		pelicula.genero = "Fantasía";
 		pelicula.calificar(4.2);
 		
