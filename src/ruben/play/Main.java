@@ -1,6 +1,7 @@
 package ruben.play;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import ruben.play.contenido.Pelicula;
 import ruben.play.plataforma.Usuario;
@@ -15,10 +16,13 @@ public class Main {
 		pelicula.genero = "Fantasía";
 		pelicula.calificar(4.2);
 		
-		System.out.println(pelicula.obtenerFichaTecnica());
+		
 		
 		Usuario usuario = new Usuario();
 		usuario.nombre = "Carlos";
+		usuario.fechaRegistro = LocalDateTime.of(2025, 12, 24, 17, 15, 14);
+		
+		System.out.println(usuario.fechaRegistro);
 		
 		usuario.ver(pelicula);
 
