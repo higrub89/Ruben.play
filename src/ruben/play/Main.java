@@ -15,7 +15,13 @@ public class Main {
 		pelicula.fechaEstreno = LocalDate.of(2018, 10, 15);
 		pelicula.genero = "Fantasía";
 		pelicula.calificar(4.2);
+		pelicula.duracion = 120;
 		
+		long duracionLong = pelicula.duracion;
+		int	calificacionInt = (int) pelicula.calificacion;
+		
+		System.out.println("Duracion Long " + duracionLong);
+		System.out.println("calificacion int " + calificacionInt);
 		
 		
 		Usuario usuario = new Usuario();
@@ -25,6 +31,7 @@ public class Main {
 		System.out.println(usuario.fechaRegistro);
 		
 		usuario.ver(pelicula);
+		
 
 //		
 //		Scanner scanner = new Scanner(System.in);
